@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+const trip = {
+  name: 'Wedding Portrait',
+  subtitle: '婚纱照',
+  description: '在这里写几句话，记录这次的感受。',
+  photos: [
+    '/images/wedding-1.jpg',
+    '/images/wedding-2.jpg',
+    '/images/wedding-3.jpg',
+    '/images/wedding-4.jpg',
+  ],
+}
+---
+<Layout title={`${trip.name} — Your Name`}>
+  <div class="pt-32 px-8 md:px-16 pb-24">
+    <div class="mb-16">
+      <p class="text-xs tracking-widest uppercase text-white/40 mb-3">{trip.subtitle}</p>
+      <h2 class="text-4xl md:text-6xl font-light">{trip.name}</h2>
+      <p class="mt-6 text-white/60 max-w-lg font-light leading-relaxed">{trip.description}</p>
+    </div>
+    <div class="columns-1 md:columns-2 gap-4 space-y-4">
+      {trip.photos.map(photo => (
+        <div class="break-inside-avoid overflow-hidden">
+          <img
+            src={photo}
+            alt={trip.name}
+            class="w-full object-cover hover:scale-[1.02] transition-transform duration-500"
+          />
+        </div>
+      ))}
+    </div>
+    <div class="mt-16">
+      <a href="/destinations" class="text-xs tracking-widest uppercase text-white/40 hover:text-white transition-colors">
+        ← All Albums
+      </a>
+    </div>
+  </div>
+</Layout>

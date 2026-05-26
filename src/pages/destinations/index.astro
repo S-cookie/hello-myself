@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+const trips = [
+  {
+    slug: 'yueyang-bbq',
+    name: 'Yueyang BBQ Night',
+    subtitle: '岳阳烧烤',
+    cover: '/images/yueyang-bbq-1.jpg',
+  },
+  {
+    slug: 'wedding',
+    name: 'Wedding Portrait',
+    subtitle: '婚纱照',
+    cover: '/images/wedding-1.jpg',
+  },
+  {
+    slug: 'vintage',
+    name: 'Vintage Memories',
+    subtitle: '怀旧老照片',
+    cover: '/images/vintage-1.jpg',
+  },
+]
+---
+<Layout title="Albums — Your Name">
+  <div class="pt-32 px-8 md:px-16 pb-24">
+    <h2 class="text-xs tracking-widest uppercase text-white/40 mb-16">All Albums</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {trips.map(trip => (
+        <a href={`/destinations/${trip.slug}`} class="group block">
+          <div class="overflow-hidden aspect-square mb-4">
+            <img
+              src={trip.cover}
+              alt={trip.name}
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+            />
+          </div>
+          <p class="text-sm font-medium tracking-wide">{trip.name}</p>
+          <p class="text-xs text-white/40 mt-1">{trip.subtitle}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>
