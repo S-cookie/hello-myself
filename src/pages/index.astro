@@ -16,7 +16,7 @@ import Layout from '../layouts/Layout.astro'
       <p class="mt-4 text-lg text-white/60 font-light">Moments I've captured</p>
     </div>
     <a
-      href="/destinations"
+      href={`${import.meta.env.BASE_URL}destinations/`}
       class="absolute bottom-16 right-8 md:right-16 text-xs tracking-widest uppercase text-white/60 hover:text-white transition-colors"
     >
       View all →
@@ -27,7 +27,7 @@ import Layout from '../layouts/Layout.astro'
   <section class="px-8 md:px-16 py-24">
     <p class="text-xs tracking-widest uppercase text-white/40 mb-12">Featured</p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <a href="/destinations/yueyang-bbq" class="group block">
+      <a href={`${import.meta.env.BASE_URL}destinations/yueyang-bbq/`} class="group block">
         <div class="overflow-hidden aspect-[3/4] mb-4">
           <img
             src={`${import.meta.env.BASE_URL}images/yueyang-bbq-1.jpg`}
@@ -38,7 +38,7 @@ import Layout from '../layouts/Layout.astro'
         <p class="text-sm tracking-wide">Yueyang BBQ Night</p>
         <p class="text-xs text-white/40 mt-1">岳阳烧烤</p>
       </a>
-      <a href="/destinations/wedding" class="group block">
+      <a href={`${import.meta.env.BASE_URL}destinations/wedding/`} class="group block">
         <div class="overflow-hidden aspect-[3/4] mb-4">
           <img
             src={`${import.meta.env.BASE_URL}images/wedding-2.jpg`}
@@ -49,7 +49,7 @@ import Layout from '../layouts/Layout.astro'
         <p class="text-sm tracking-wide">Wedding Portrait</p>
         <p class="text-xs text-white/40 mt-1">婚纱照</p>
       </a>
-      <a href="/destinations/vintage" class="group block">
+      <a href={`${import.meta.env.BASE_URL}destinations/vintage/`} class="group block">
         <div class="overflow-hidden aspect-[3/4] mb-4">
           <img
             src={`${import.meta.env.BASE_URL}images/vintage-1.jpg`}

@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Oops — Page Not Found">
+  <div class="min-h-screen flex flex-col items-center justify-center px-8 text-center">
+    <p class="text-[8rem] md:text-[12rem] font-light leading-none text-white/10 select-none">
+      404
+    </p>
+    <div class="-mt-8 md:-mt-12">
+      <p class="text-xl md:text-2xl font-light text-white/60 mb-2">
+        这个页面好像在跟我玩捉迷藏
+      </p>
+      <p class="text-sm text-white/30 mb-10">
+        它躲起来了，我找不到…
+      </p>
+      <a
+        href={`${import.meta.env.BASE_URL}`}
+        class="inline-block text-xs tracking-widest uppercase text-white/50 hover:text-white transition-colors border border-white/20 hover:border-white/60 px-8 py-4"
+      >
+        ← 带我回家
+      </a>
+    </div>
+  </div>
+</Layout>

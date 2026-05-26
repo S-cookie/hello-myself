@@ -27,7 +27,7 @@ const trips = [
     <h2 class="text-xs tracking-widest uppercase text-white/40 mb-16">All Albums</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {trips.map(trip => (
-        <a href={`/destinations/${trip.slug}`} class="group block">
+        <a href={`${import.meta.env.BASE_URL}destinations/${trip.slug}/`} class="group block">
           <div class="overflow-hidden aspect-square mb-4">
             <img
               src={trip.cover}
