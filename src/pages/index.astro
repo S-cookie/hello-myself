@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro'
   <!-- Hero: 全屏封面大图 -->
   <section class="relative h-screen w-full overflow-hidden">
     <img
-      src="/images/wedding-1.jpg"
+      src={`${import.meta.env.BASE_URL}images/wedding-1.jpg`}
       alt="Cover"
       class="w-full h-full object-cover"
     />
@@ -30,7 +30,7 @@ import Layout from '../layouts/Layout.astro'
       <a href="/destinations/yueyang-bbq" class="group block">
         <div class="overflow-hidden aspect-[3/4] mb-4">
           <img
-            src="/images/yueyang-bbq-1.jpg"
+            src={`${import.meta.env.BASE_URL}images/yueyang-bbq-1.jpg`}
             alt="岳阳烧烤"
             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
           />
@@ -41,7 +41,7 @@ import Layout from '../layouts/Layout.astro'
       <a href="/destinations/wedding" class="group block">
         <div class="overflow-hidden aspect-[3/4] mb-4">
           <img
-            src="/images/wedding-2.jpg"
+            src={`${import.meta.env.BASE_URL}images/wedding-2.jpg`}
             alt="婚纱照"
             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
           />
@@ -52,7 +52,7 @@ import Layout from '../layouts/Layout.astro'
       <a href="/destinations/vintage" class="group block">
         <div class="overflow-hidden aspect-[3/4] mb-4">
           <img
-            src="/images/vintage-1.jpg"
+            src={`${import.meta.env.BASE_URL}images/vintage-1.jpg`}
             alt="怀旧老照片"
             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
           />
